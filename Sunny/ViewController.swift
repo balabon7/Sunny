@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    private let networkWeatherManager = NetworkWeatherManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        networkWeatherManager.fetchCurrentWeather(forCity: "London")
     }
 
 
