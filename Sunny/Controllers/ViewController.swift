@@ -19,18 +19,25 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        networkWeatherManager.delegate = self
     }
     
     @IBAction func searchPressed(_ sender: UIButton) {
         presentSearchAlertController(withTitle: "Введите название города на английском", message: nil, style: .alert) { city in
             self.networkWeatherManager.fetchCurrentWeather(forCity: city)
-            
-            self.networkWeatherManager.onCompletion = { currentWeather in
-                print(currentWeather.cityName)
-            }
+
         }
     }
-    
 }
 
+extension ViewController: NetworkWeatherManagerDelegate {
+    
+    func updateInterface(_: NetworkWeatherManager, with currentWeather: CurrentWeather) {
+        
+        DispatchQueue.main.async {
+            self.cityLabel.text = currentWeather.cityName
+        }
+       
+        print(currentWeather.cityName)
+    }
+}

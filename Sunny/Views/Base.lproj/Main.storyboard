@@ -110,6 +110,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JC1-A6-Uox"/>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="hc5-n0-ESp" id="Qby-wI-6Ny"/>
+                        <outlet property="feelsLikeTemperatureLabel" destination="B5U-lz-OSe" id="ONp-i3-MLz"/>
+                        <outlet property="temperatureLabel" destination="tFL-44-yhV" id="Db7-mA-z0D"/>
+                        <outlet property="weatherIconImageView" destination="tmz-Ka-fm9" id="cf6-S4-0L2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Fd-FW-Kvz" sceneMemberID="firstResponder"/>
             </objects>
