@@ -37,19 +37,12 @@ class ViewController: UIViewController {
         if CLLocationManager.locationServicesEnabled() {
             locationManager.requestLocation()
         }
-        
-        
     }
     
     @IBAction func searchPressed(_ sender: UIButton) {
         presentSearchAlertController(withTitle: "Введите название города на английском", message: nil, style: .alert) { [unowned self] city in
-            
-            self.networkWeatherManager.onCompletion = { [weak self] currentWeather in
-                guard let self = self else { return }
-                self.updateInterfaceWith(weather: currentWeather)
-            }
-            
-            self.networkWeatherManager.fetchCurrentWeather(forCity: city)
+        
+            self.networkWeatherManager.fetchCurrentWeather(forRequestType: .cityName(city: city))
         }
     }
     
@@ -73,7 +66,7 @@ extension ViewController: CLLocationManagerDelegate {
         let latitude = location.coordinate.latitude
         let longitude = location.coordinate.longitude
         
-        networkWeatherManager.fetchCurrentWeather(forCity: <#T##String#>)
+        networkWeatherManager.fetchCurrentWeather(forRequestType: .cordinate(latitude: latitude, longitude: longitude))
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
