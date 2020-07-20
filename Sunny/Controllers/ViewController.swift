@@ -25,7 +25,9 @@ class ViewController: UIViewController {
     
     @IBAction func searchPressed(_ sender: UIButton) {
         presentSearchAlertController(withTitle: "Введите название города на английском", message: nil, style: .alert) { city in
-            self.networkWeatherManager.fetchCurrentWeather(forCity: city)
+            self.networkWeatherManager.fetchCurrentWeather(forCity: city) { currentWeather in
+                print(currentWeather.cityName)
+            }
         }
     }
     
