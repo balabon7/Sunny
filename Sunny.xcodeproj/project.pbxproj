@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0445676924C56ABB00D818F9 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445676824C56ABB00D818F9 /* CurrentWeather.swift */; };
 		049C8CCC24C2F934002FDB17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C8CCB24C2F934002FDB17 /* AppDelegate.swift */; };
 		049C8CCE24C2F934002FDB17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C8CCD24C2F934002FDB17 /* SceneDelegate.swift */; };
 		049C8CD024C2F934002FDB17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C8CCF24C2F934002FDB17 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0445676824C56ABB00D818F9 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		049C8CC824C2F934002FDB17 /* Sunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049C8CCB24C2F934002FDB17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		049C8CCD24C2F934002FDB17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				049C8CDF24C3073F002FDB17 /* NetworkWeatherManager.swift */,
 				049C8CEA24C31611002FDB17 /* CurrentWeatherData.swift */,
+				0445676824C56ABB00D818F9 /* CurrentWeather.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			files = (
 				049C8CE224C3094D002FDB17 /* Constants.swift in Sources */,
 				049C8CD024C2F934002FDB17 /* ViewController.swift in Sources */,
+				0445676924C56ABB00D818F9 /* CurrentWeather.swift in Sources */,
 				049C8CCC24C2F934002FDB17 /* AppDelegate.swift in Sources */,
 				049C8CEB24C31611002FDB17 /* CurrentWeatherData.swift in Sources */,
 				049C8CE424C30B17002FDB17 /* ViewController+alertController.swift in Sources */,
